@@ -2,42 +2,28 @@
 <html>
     <head>
         <meta charset="utf-8" lang="en-us">
-        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="styles.css">
         <title>APOD</title>       
     </head>
     <body>
         <header>
             <div class="nav-bar">
-                <a href="../home.html" id="icon">Astronomy Picture of the Day</a>
-                <a href="/calendar/2025.html" class="nav">Calendar</a>
-                <a href="../gallery.html" class="nav">Gallery</a>
-                <a href="1122025.html" class="nav">APOD</a>
-                <a class="nav-selected" href="../home.html">Home</a>
+                <a href="home.html" id="icon">Astronomy Picture of the Day</a>
+                <a href="calendar/2025.html" class="nav">Calendar</a>
+                <a href="gallery.html" class="nav">Gallery</a>
+                <a href="apod/1122025.html" class="nav">APOD</a>
+                <a class="nav-selected" href="home.html">Home</a>
             </div>
         </header>
 
         <main>
             <div class="container">
-                <div id="apod-page">
-                    <div class="column-container" >
-                            <img src="/assets/img/10312025.png" alt="IRAS 04302: Butterfly Disk Planet Formation" class="image-container">
-                            <h4>Image Credit & Copyright: Christophe Vergnes, Hervé Laur</h4>
-                            <div class="buttons-container">
-                                <button>View in Fullscreen</button>
-                            </div>
-                    </div>
-                    <div class="desc-container">
-                        <h1>Phantoms in Cassiopeia</h1>
-                        <h4>2025, October 31</h4>
-                        <p>These brightly outlined flowing shapes look ghostly on a cosmic scale. A telescopic view toward the constellation Cassiopeia, the colorful skyscape features the swept-back, comet-shaped clouds IC 59 (left) and IC 63. About 600 light-years distant, the clouds aren't actually ghosts. They are slowly disappearing though, under the influence of energetic radiation from hot, luminous star gamma Cas. Gamma Cas is physically located only 3 to 4 light-years from the nebulae and lies just above the right edge of the frame. Slightly closer to gamma Cas, IC 63 is dominated by red H-alpha light emitted as hydrogen atoms ionized by the hot star's ultraviolet radiation recombine with electrons. Farther from the star, IC 59 shows less H-alpha emission but more of the characteristic blue tint of dust reflected star light. The field of view spans over 1 degree or 10 light-years at the estimated distance of the interstellar apparitions.</p>
-
-                        <div class="desc-buttons-container">
-                            <button><a href=10302025.html>Yesterday's Image</a></button>
-                            <button><a href=1112025.html>Tomorrow's Image</a></button>
-                        </div>
-                    </div>
+                <div class="submissions">
+                    <h1>Search APOD</h1>
+                       <input class="button" type="text" placeholder="Search" ></input>
+                    <p>After you enter some text in the search field press 'return' or 'enter'. Thumbnail images and links to APODs containing the text will be displayed.</p>
                 </div>
-                                <div class="footer">
+                <div class="footer">
                     <hr>
                     <p>
                         <a href="http://www.star.ucl.ac.uk/~apod/apod/archivepix.html">Archive</a> |
@@ -90,8 +76,8 @@
                         ©️ 2025 sagedontgo.
                     </p>
                 </div>
-                </div>
             </div>
+            
         </main>
     </body>
 </html>

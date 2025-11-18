@@ -102,7 +102,7 @@ main {
 .column-container h4 {
   margin-top: 2px;
   margin-bottom: 2px;
-  line-height: 1.5; /* optional: keeps text compact but readable */
+  line-height: 1.5;
 }
 
 .image-container {
@@ -137,6 +137,23 @@ main {
     display: flex;
     width: 25%;
     justify-content: space-between;
+}
+
+.button {
+    background-color: rgba(224, 170, 255, 0.1);
+    border: none;
+    color: #EDEDED;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    padding: 13px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: rgba(224, 170, 255, 0.5);
+    transform: scale(1.1);
 }
 
 .desc-container {
@@ -252,10 +269,9 @@ main {
     background: rgba(13, 11, 26, 0.8);
 }
 
-footer {
-    padding-top: 155px;
-}
+
 .footer {
+    padding-top: 15%;
     color: #EDEDED;
     width: 100vw;
     height: 10%;
@@ -265,10 +281,6 @@ footer {
     flex-direction: column;
     line-height: 0.9px;
     font-family: plus-jakarta-sans, monospace;
-    border-top-style: solid;
-    border-top-width: thick;
-    border-radius: 10px;
-    border-top-color: #EDEDED;
     
 }
 
@@ -291,57 +303,141 @@ footer {
 } 
 
 .calendar-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: 10px; 
-    gap: 20px;
-    padding: 20px 40px;
-    height: 5vw;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 40px;
 }
 
 .calendar-year {
-        text-align: center;
-    color: #EDEDED;
-    font-family: space-mono, monospace;
+  text-align: center;
+  color: #EDEDED;
+  font-family: space-mono, monospace;
 }
 
 .calendar-item {
-    background-color: rgba(224, 170, 255, 0.05);
-    border: thin solid #5E239D;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    width: 100%;
-    max-width: 400px;
-    max-height: 300px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    grid-row-end: span 30;
-    position: relative;
-    overflow: hidden;
+  background-color: rgba(224, 170, 255, 0.05);
+  border: thin solid #5E239D;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .calendar-month {
-    color: #EDEDED;
-    font-family: plus-jakarta-sans, monospace;
-    padding: 5px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(13, 11, 26, 0.8);
+  color: #EDEDED;
+  font-family: plus-jakarta-sans, monospace;
+  padding: 10px 0;
+  background: rgba(13, 11, 26, 0.8);
+  font-weight: bold;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  color: #EDEDED;
+  font-family: space-mono, monospace;
+  background: rgba(13, 11, 26, 0.4);
+  padding: 5px 0;
+}
+
+.calendar-weekdays div {
+  text-align: center;
+  font-size: 0.9rem;
 }
 
 .calendar-days {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: 1px; 
-    column-count: 7;
-    gap: 10px;
-    padding: 20px 40px;
-    height: 5vw;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  color: #EDEDED;
+  font-family: plus-jakarta-sans, monospace;
+  padding: 10px;
+  gap: 4px;
+}
+
+.calendar-days div {
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 4px;
+  background: rgba(224, 170, 255, 0.03);
+  transition: background 0.3s ease-in-out;
+}
+
+.calendar-days div:hover {
+  background: rgba(224, 170, 255, 0.15);
+}
+
+.empty {
+  background: transparent;
+}
+
+.submissions {
     color: #EDEDED;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.submissions h1 {
+    font-family: space-mono, monospace;
+    
+}
+
+.submissions p {
+    font-family: plus-jakarta-sans, monospace;
+    
+}
+
+.about-apod h1, h2, h3 {
+    color: #EDEDED;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-family: space-mono, monospace;
+}
+
+.about-apod {
+    color: #EDEDED;
+    text-align: left;
+    display: flex;
+    flex-flow: column;
+    padding: 16px;
+    font-family: plus-jakarta-sans, monospace;
+}
+
+.index {
+    flex: 50%;
+    flex-direction: column;
+    padding: 10px;
+    color: #EDEDED;
+    display: flex;
+    height: 30vw;
+    margin-bottom: 450px;
+}
+
+.index h1, h2, h3, h4, h5, h6 {
+    color: #EDEDED;
+    font-family: space-mono, monospace;
+    justify-content: left;
+    align-items: left;
+}
+
+.index p, a, b {
+    color: #EDEDED;
+    font-family: plus-jakarta-sans, monospace;
+    justify-content: center;
+    align-items: center;
+}
+
+.index h4 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  line-height: 1.5; /* optional: keeps text compact but readable */
 }
